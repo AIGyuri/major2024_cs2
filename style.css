@@ -12,20 +12,6 @@ body {
 	margin: 0
 }
 
-/*
-1rem = a html elemen megadott betűméret
-ha nincs megadva, akkor általában 16px az alapértelmezett értéke
-a CSS mértékegységekről itt olvashatsz bővebben:
-https://cyrex.hu/2017/11/09/css-mertekegysegek/
-*/
-
-
-/*
-görgetéskor a fejléc feltapad
-a position: sticky csak akkor működik, ha a top érték be van állítva
-dokumentáció:
-https://www.w3schools.com/css/css_positioning.asp
-*/
 nav {
 	background: #FFA500;
 	position: sticky;
@@ -51,102 +37,29 @@ nav a {
 	padding: 1.2rem 1rem
 }
 
-/*
-.navigation-ön belüli első <li> kiszelektálása
-*/
 .navigation li:first-child {
 	padding: 1.2rem 1rem;
 	color: rgba(255,255,255,.5)
 }
 
 
-/* ha a kijelző mérete legfeljebb 800px széles */
-
-@media(max-width:800px) {
-	.intro {
-		margin: 2rem 0
-	}
-	.intro img {
-		max-width: 200px
-	}
-}
-
-/*
-ha a kijelző mérete legfeljebb 480px széles
-*/
-@media(max-width:480px) {
-	.intro img {
-		float: none;
-		margin: 1rem auto;
-		display: block
-	}	
-}
-
-
-
-
-.box-content {
-	padding: 1.5rem;
-	font-size: .9rem
-}
-
-.btn {
-	display: inline-block;
-	padding: .5rem 1rem;
-	background: #FFA500;
-	color: white;
-	text-decoration: none;
-	border-radius: 5px
-}
-
-
-
-.mobile-menu-button {
-	width: 50px;
-	display: block;
-	float: right;
-	border: 1px solid rgba(255,255,255,.2);
-	padding: 10px;
-	margin: 7px 5px 0 0;
-	display: none
-}
-.mobile-menu-button span {
-	display: block;
-	height: 4px;
-	background: white;
-	margin: 0 0 5px 0;
-	border-radius: 2px
-}
-/*
-az utolsó <span> típusú elem kiszelektálása a .mobile-menu-button class-on belül
-*/
-.mobile-menu-button span:last-of-type {
-	margin: 0
-}
-
-/*
-a .mobile-menu-button után található checkbox típusú input kiszelektálása
-*/
 .mobile-menu-button + input[type="checkbox"] {
 	display: none
 }
 
-/*
-a .mobile-menu-button után található checkbox típusú input kiszelektálása,
-és, ha ez be van jelölve (checked), akkor a .navigation-ön belül összes <li>-t
-eltüntetjük, kivéve az elsőt
-*/
+
 .mobile-menu-button + input[type="checkbox"]:checked ~ .navigation li:not(:first-child) {
 	display: block
 }
 
-
-
-/*
-ha a kijelző mérete legfeljebb 800px széles
-*/
-@media(max-width:800px) {
-	.mobile-menu-button {
-		display: block
-	}
+#fejlec {
+    background-image: url(pic/backgr1.png);
+    height: 100vh;
+    min-height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    
 }
+
